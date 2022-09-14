@@ -31,11 +31,6 @@ spec:
       branch: "main"
     dockerfile_path: "netbox/dockerfile"
     source_dir: "netbox"
-  databases:
-  - name: "pg"
-    engine: "PG"
-  - name: "redis"
-    engine: "REDIS"
     
   envs:
   # Postgres
