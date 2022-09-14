@@ -48,15 +48,12 @@ spec:
   # Email
   - key: EMAIL_FROM
   - key: EMAIL_PASSWORD
-    type: SECRET
   - key: EMAIL_PORT
     value: "25"
   - key: EMAIL_SERVER
     value: localhost
   - key: EMAIL_SSL_CERTFILE
-    type: SECRET
   - key: EMAIL_SSL_KEYFILE
-    type: SECRET
   - key: EMAIL_TIMEOUT
   - key: EMAIL_USERNAME
   # Mutually Exclusive, can't both be true
@@ -64,7 +61,6 @@ spec:
   - key: EMAIL_USE_TLS
   # Napalm
   - key: NAPALM_PASSWORD
-    type: SECRET
   - key: NAPALM_TIMEOUT
   - key: NAPALM_USERNAME
   # Redis
@@ -80,7 +76,6 @@ spec:
     value: "false"
   - key: REDIS_CACHE_PASSWORD
     value: ${redis.PASSWORD}
-    type: SECRET
   - key: REDIS_CACHE_SSL
     value: "true"
   # Secret Stuff
@@ -101,15 +96,10 @@ spec:
     value: "true"
   # Secrets
   - key: SECRET_KEY
-    type: SECRET
   - key: SUPERUSER_API_TOKEN
-    type: SECRET
   - key: SUPERUSER_EMAIL
-    type: SECRET
   - key: SUPERUSER_NAME
-    type: SECRET
   - key: SUPERUSER_PASSWORD
-    type: SECRET
   # Misc
   - key: CORS_ORIGIN_ALLOW_ALL
     value: "true"
