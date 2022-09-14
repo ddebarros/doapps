@@ -2,10 +2,9 @@ spec:
   name: netbox
   services:
   - name: "netbox-web"
-    github:
-      repo: "oxide-one/doapps"
+    git:
+      repo_clone_url: "https://github.com/ddebarros/doapps.git"
       branch: "main"
-      deploy_on_push: true
     dockerfile_path: "netbox/dockerfile"
     source_dir: "netbox"
     http_port: 8080
@@ -19,15 +18,15 @@ spec:
   workers:
   - name: "netbox-worker"
     run_command: "/opt/netbox/venv/bin/python /opt/netbox/netbox/manage.py rqworker"
-    github:
-      repo: "oxide-one/doapps"
+    git:
+      repo_clone_url: "https://github.com/ddebarros/doapps.git"
       branch: "main"
     dockerfile_path: "netbox/dockerfile"
     source_dir: "netbox"
   - name: "netbox-housekeeping"
     run_command: "/opt/netbox/housekeeping.sh"
-    github:
-      repo: "oxide-one/doapps"
+    git:
+      repo_clone_url: "https://github.com/ddebarros/doapps.git"
       branch: "main"
     dockerfile_path: "netbox/dockerfile"
     source_dir: "netbox"
