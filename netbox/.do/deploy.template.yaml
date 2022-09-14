@@ -42,7 +42,6 @@ spec:
     value: ${pg.DATABASE}
   - key: DB_PASSWORD
     value: ${pg.PASSWORD}
-    type: SECRET
   - key: DB_USER
     value: ${pg.USERNAME}
   # Email
@@ -91,7 +90,6 @@ spec:
     value: "false"
   - key: REDIS_PASSWORD
     value: ${redis.PASSWORD}
-    type: SECRET
   - key: REDIS_SSL
     value: "true"
   # Secrets
